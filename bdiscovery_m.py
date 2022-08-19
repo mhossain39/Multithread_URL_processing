@@ -61,7 +61,7 @@ def get_igtok():
 	return d
 
 def process_url(d,cursor):
-	url='https://graph.facebook.com/v3.2/'+str(d['igd'])+'?fields=business_discovery.username('+d['username']+'){followers_count,follows_count,media_count,ig_id}&access_token='+d['ftoken']
+	url='https://url/'+str(d['igd'])+'?fields=business_discovery.username('+d['username']+'){followers_count,follows_count,media_count,ig_id}&access_token='+d['ftoken']
 	p = get_proxy()
 	proxy = {'http': p, 'https': p}
 	try:
