@@ -28,8 +28,8 @@ def get_igtok():
 	return d
 
 def process_url(d):
-	url='https://graph.facebook.com/v3.2/'+str(d['igd'])+'?fields=business_discovery.username('+d['username']+'){followers_count,follows_count,media_count,ig_id}&access_token='+d['ftoken']
-	proxies = {'http': 'http://ninjaigbot:Power2017@217.61.14.32:3128/', 'https': 'http://ninjaigbot:Power2017@217.61.14.32:3128/'}
+	url='https://url/'+str(d['igd'])+'?fields=business_discovery.username('+d['username']+'){followers_count,follows_count,media_count,ig_id}&access_token='+d['ftoken']
+	proxies = {'http': 'http://user:pass@proxyip:port/', 'https': 'http://user:pass@proxyip:port'}
 	output = requests.get(url, proxies=proxies, verify=False, timeout=3).text
 	if output.find("business_discovery")!=-1:
 		data = json.loads(output)
